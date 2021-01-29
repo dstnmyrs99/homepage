@@ -8,7 +8,6 @@ export default function Page({ site }) {
 
   const key = process.env.REACT_APP_NEWS_KEY;
   const url = `https://gnews.io/api/v4/search?q=${site}&lang=en&token=${key}`;
-  console.log(key);
 
   const pageChange = (value) => {
     if (page === 9 && value === 1) {
