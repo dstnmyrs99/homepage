@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-const APIkey = process.env.WEATHER_KEY;
+const APIkey = process.env.REACT_APP_WEATHER_KEY;
 const url = `https://api.openweathermap.org/data/2.5/weather?q=bulverde&appid=${APIkey}`;
 
 function Weather() {

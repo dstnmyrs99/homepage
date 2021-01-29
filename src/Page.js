@@ -6,7 +6,7 @@ export default function Page({ site }) {
   const [news, setNews] = useState("");
   const [page, setPage] = useState(0);
 
-  const key = process.env.NEWS_KEY;
+  const key = process.env.REACT_APP_NEWS_KEY;
   const url = `https://gnews.io/api/v4/search?q=${site}&lang=en&token=${key}`;
   console.log(key);
 
