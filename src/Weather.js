@@ -10,7 +10,6 @@ function Weather() {
   useEffect(() => {
     const getData = async () => {
       const weather = await axios.get(url);
-      console.log(weather.data.weather);
       setData([weather.data.weather[0].description, weather.data.main.temp]);
     };
     getData();

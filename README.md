@@ -10,4 +10,6 @@ All the sites I frequenly visit in one place
 
 Shows the top 10 articles on the site.  
 
-With links directly to the articles.  
+With links directly to the articles.    
+  
+  ![homepage](/public/Capture.PNG)
