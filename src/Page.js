@@ -6,9 +6,7 @@ export default function Page({ site }) {
   const [news, setNews] = useState("");
   const [page, setPage] = useState(0);
 
-  const key = process.env.REACT_APP_NEWS_KEY;
-  const url = `https://gnews.io/api/v4/search?q=${site}&lang=en&token=${key}`;
-
+  
   const pageChange = (value) => {
     if (page === 9 && value === 1) {
       setPage(0);
@@ -20,18 +18,15 @@ export default function Page({ site }) {
   };
 
   useEffect(() => {
+    const key = process.env.REACT_APP_NEWS_KEY;
+    const url = `https://gnews.io/api/v4/search?q=${site}&lang=en&token=${key}`;
     const filterNews = async () => {
-      setNews(await getNews());
+      const { data } = await axios.get(url);
+      setNews(data.articles);
     };
     filterNews();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [site]);
 
-  const getNews = async () => {
-    const { data } = await axios.get(url);
-
-    return data.articles;
-  };
 
   return (
     <div className="page">
