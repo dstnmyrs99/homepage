@@ -26,7 +26,7 @@ export default function Page({ site, seconds }) {
     };
     setTimeout(() => {
       filterNews();
-    }, seconds * 3000);
+    }, seconds * 4000);
     
   }, [site, seconds]);
 
