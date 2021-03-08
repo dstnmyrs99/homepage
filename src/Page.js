@@ -24,7 +24,11 @@ export default function Page({ site }) {
       const { data } = await axios.get(url);
       setNews(data.articles);
     };
-    filterNews();
+    let randomNumber = MAth.floot(Math.random()* 4000)
+    setTimeout(() => {
+      filterNews();
+    }, randomNumber);
+    
   }, [site]);
 
 
