@@ -28,7 +28,7 @@ export default function Page({ site, seconds }) {
       filterNews();
     }, seconds * 1000);
     
-  }, [site]);
+  }, [site, seconds]);
 
 
   return (
