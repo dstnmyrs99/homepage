@@ -2,7 +2,7 @@ import axios from "axios";
 import "./Page.css";
 import { useEffect, useState } from "react";
 
-export default function Page({ site }) {
+export default function Page({ site, seconds }) {
   const [news, setNews] = useState("");
   const [page, setPage] = useState(0);
 
@@ -24,10 +24,9 @@ export default function Page({ site }) {
       const { data } = await axios.get(url);
       setNews(data.articles);
     };
-    let randomNumber = Math.floor(Math.random()* 4000)
     setTimeout(() => {
       filterNews();
-    }, randomNumber);
+    }, seconds * 1000);
     
   }, [site]);
 

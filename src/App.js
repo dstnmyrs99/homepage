@@ -9,12 +9,12 @@ import Weather from './Weather';
     <div className="App">
       <Weather />
       <div className="container">
-        <Page site='espn'/>
-        <Page site='mma'/>
-        <Page site='nfl'/>
-        <Page site='reddit'/>
-        <Page site='nba'/>
-        <Page site='news'/>
+        <Page site='espn' seconds={0}/>
+        <Page site='mma' seconds={0}/>
+        <Page site='nfl' seconds={1}/>
+        <Page site='reddit' seconds={1}/>
+        <Page site='nba' seconds={2}/>
+        <Page site='news' seconds={2}/>
       </div>
     </div>
   );
